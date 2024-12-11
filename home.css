@@ -1,0 +1,133 @@
+/* This section is for uhm.... I guess for like all BWAHAHAHAH*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+img{
+  width: 100%;
+}
+
+/* This section is for the header or navigation bar*/
+
+nav {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #212b38;
+  transition: .7 ease;
+}
+nav a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; 
+  color: aliceblue;
+}
+
+.link-container { 
+  display: flex;
+   
+}
+.link-logo{
+  font-size: 4vw;
+}
+.link{
+  font-size: 1.5vw;
+  margin: 10px;
+}
+
+/* Main BODYYYYYYY*/
+
+.main{
+  text-align: center;
+  width: 90%;
+  font-size: 2vw;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: .2vw solid rgba(0, 0, 0, 0.5);
+  border-top: .2vw solid rgba(0, 0, 0, 0.5);
+}
+.school-name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  margin: 0;
+}
+
+/*For the images*/
+
+.profiles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:2vh 0 2vh 0;
+  font-size: 2vw;
+}
+.profile img{
+  border: .3vw solid white;
+  border-radius: 50%;
+  width: 70%;
+  margin: auto;
+  display: block;
+}
+.see-profile{
+  display: none;
+}
+
+
+
+/* UGH THIS IS THE PART I HATE WHICH IS THE ANIMATION*/
+
+nav .link:after {
+  content: "";
+  position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateZ(-50%);
+    width: 0;
+    height: 10%;
+  background-color: black;
+  transition: width 0.2s ease-in-out;
+}
+
+nav .link:hover:after {
+  width: 110%; 
+}
+
+/* I guess to make this responsive HAHAHAH*/
+
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column; 
+    justify-content: center; 
+    text-align: center; 
+  }
+  .link {
+    display: none; 
+  }
+  .profiles{
+    display: flex;
+    flex-direction: column;
+  }
+  .profile{
+    width:  70%;
+    margin-bottom: 5vw;
+  }
+}
